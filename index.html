@@ -5,8 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="./bootstrap-5.3.1-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
+    <script src="./bootstrap-5.3.1-dist/js/bootstrap.bundle.js"></script>
+    <script src="./bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body>
-    Dummy file
+    <div class="wrapper text-center align-items-center justify-content-center">
+      <p class="tool-tip-header">A bootstrap Tooltip</p>
+      <button
+        type="button"
+        class="btn btn-secondary"
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        data-bs-custom-class="custom-tooltip"
+        data-bs-title="This top tooltip is themed via CSS variables."
+        text="center"
+      >
+        Hover on me !
+      </button>
+    </div>
+    <script>
+      const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+      );
+      console.log(...tooltipTriggerList);
+
+      const tooltipList = [...tooltipTriggerList].map(
+        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+      );
+    </script>
   </body>
 </html>
