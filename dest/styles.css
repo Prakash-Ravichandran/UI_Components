@@ -1,0 +1,99 @@
+:root {
+  --title-color: #0b2055;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url("/fonts/Poppins/Poppins-Light.ttf") format("woff2");
+}
+@font-face {
+  font-family: sans-serif;
+  src: url("/fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf") format("woff2");
+}
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+}
+
+.payment {
+  border-radius: 32px;
+  background: #fff;
+  padding: 64px;
+}
+.payment__title {
+  color: var(--title-color);
+  font-family: "Merriweather", sans-serif;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+}
+.payment__subtitle {
+  color: var(--title-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+}
+.payment__bd-container {
+  margin-top: 24px;
+}
+.payment__body {
+  border-radius: 12px;
+  background: #f5f9ff;
+  padding: 32px;
+}
+.payment__bd-title {
+  color: var(--title-color);
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(0.5rem, 0.5rem + 1vw, 2rem);
+  font-style: normal;
+  font-weight: 500;
+  max-inline-size: 66ch;
+}
+.payment__interest {
+  color: var(--title-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+.payment__cost {
+  color: var(--title-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+.payment__total {
+  color: var(--title-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+.payment__splitup {
+  color: var(--title-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+.payment__button {
+  margin-top: 24px;
+}
+.payment__button button {
+  background-color: #f5f9ff;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.payment__button--label {
+  border-radius: 8px;
+  border: 1px solid #5884c6;
+  padding: 16px;
+}

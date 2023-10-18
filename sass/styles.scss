@@ -1,0 +1,126 @@
+:root {
+  --title-color: #0b2055;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url("/fonts/Poppins/Poppins-Light.ttf") format("woff2");
+}
+@font-face {
+  font-family: sans-serif;
+  src: url("/fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf")
+    format("woff2");
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+}
+
+@mixin typography($font-family, $font-size, $font-style: normal) {
+  font-family: $font-family, sans-serif;
+  font-size: $font-size;
+  font-style: $font-style;
+}
+
+@mixin font-weight($weight) {
+  $weights: (
+    thin: 100,
+    extra-light: 200,
+    ultra-light: 200,
+    light: 300,
+    normal: 400,
+    book: 400,
+    regular: 400,
+    medium: 500,
+    semi-bold: 600,
+    demi-bold: 600,
+    bold: 700,
+    extra-bold: 800,
+    ultra-bold: 900,
+    heavy: 900,
+    black: 900,
+    ultra: 900,
+    ultra-black: 900,
+    extra-ultra: 900,
+  );
+  $output: $weight;
+  @if map-has-key($weights, $weight) {
+    $output: map-get($weights, $weight);
+  }
+
+  font-weight: $output;
+}
+.payment {
+  border-radius: 32px;
+  background: #fff;
+  padding: 64px;
+
+  &__title {
+    color: var(--title-color);
+    @include typography("Merriweather", 25px);
+    @include font-weight(bold);
+  }
+
+  &__subtitle {
+    color: var(--title-color);
+    @include typography("Poppins", 18px);
+    @include font-weight(medium);
+  }
+  &__bd-container {
+    margin-top: 24px;
+  }
+
+  &__body {
+    border-radius: 12px;
+    background: #f5f9ff;
+    padding: 32px;
+  }
+  &__bd-title {
+    color: var(--title-color);
+    @include typography("Poppins", clamp(0.5rem, 0.5rem + 1vw, 2rem));
+    @include font-weight(medium);
+    max-inline-size: 66ch;
+  }
+
+  &__interest {
+    color: var(--title-color);
+    @include typography("Poppins", 16px);
+    @include font-weight(medium);
+  }
+
+  &__cost {
+    color: var(--title-color);
+    @include typography("Poppins", 16px);
+    @include font-weight(medium);
+  }
+  &__total {
+    color: var(--title-color);
+    @include typography("Poppins", 16px);
+    @include font-weight(medium);
+  }
+
+  &__splitup {
+    color: var(--title-color);
+    @include typography("Poppins", 16px);
+    @include font-weight(medium);
+  }
+  &__button {
+    margin-top: 24px;
+
+    button {
+      background-color: #f5f9ff;
+      @include typography("Poppins", 16px);
+      @include font-weight(bold);
+    }
+  }
+}
+
+.payment__button--label {
+  border-radius: 8px;
+  border: 1px solid #5884c6;
+  padding: 16px;
+}

@@ -5,17 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="./bootstrap-5.3.1-dist/css/bootstrap.min.css"
-    />
     <link rel="stylesheet" href="./styles.css" />
-    <script src="./bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
-    <script src="./bootstrap-5.3.1-dist/js/bootstrap.bundle.js"></script>
-    <script src="./bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./dest/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="/fonts/Poppins/Poppins-Light.ttf"
+      type="font/woff2"
+      rel="preload"
+      as="font"
+      crossorigin
+    />
   </head>
   <body>
-    <div class="wrapper text-center align-items-center justify-content-center">
+    <div class="payment">
+      <div class="payment__header">
+        <h3 class="payment__title">Partial payment</h3>
+        <p class="payment__subtitle">
+          Partial payment with Consumer Bank AS or pay 53 995.- now
+        </p>
+      </div>
+      <div class="payment__bd-container">
+        <div class="payment__body">
+          <p class="payment__bd-title">
+            Select monthly amount and repayment period
+          </p>
+          <p class="payment__bd-subtitle">dropdown</p>
+          <div class="payment__group">
+            <div class="payment__interest">
+              <p class="payment__splitup">Effective interest rate</p>
+              <p class="payment__splitup">12.43%</p>
+            </div>
+            <div class="payment__cost">
+              <p class="payment__splitup">Cost</p>
+              <p class="payment__splitup">1 870.-</p>
+            </div>
+            <div class="payment__total">
+              <p class="payment__splitup">In total</p>
+              <p class="payment__splitup">55 865.-</p>
+            </div>
+            <div class="payment__description">
+              <p class="payment__bd-title">
+                Partial payment from Santander Consumer Bank AS presupposes the
+                conclusion of a credit agreement with a credit card after credit
+                assessment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="payment__button">
+        <button class="payment__button--label">Back to the product</button>
+      </div>
+    </div>
+    <!-- <div class="wrapper text-center align-items-center justify-content-center">
       <p class="tool-tip-header">A bootstrap Tooltip</p>
       <button
         type="button"
@@ -28,6 +72,8 @@
       >
         Hover on me !
       </button>
+
+
     </div>
     <script>
       const tooltipTriggerList = document.querySelectorAll(
@@ -38,6 +84,6 @@
       const tooltipList = [...tooltipTriggerList].map(
         (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
       );
-    </script>
+    </script> -->
   </body>
 </html>
