@@ -1,4 +1,5 @@
 @import "./mixins";
+@import "./reset";
 
 :root {
   --title-color: #0b2055;
@@ -27,6 +28,13 @@ body {
   background: #fff;
   padding: 64px;
 
+  &__header > *,
+  &__body > *,
+  &__group > *,
+  div {
+    margin-bottom: 24px;
+  }
+
   &__title {
     color: var(--title-color);
     @include typography("Merriweather", 25px);
@@ -37,9 +45,6 @@ body {
     color: var(--title-color);
     @include typography("Poppins", 18px);
     @include font-weight(medium);
-  }
-  &__bd-container {
-    margin-top: 24px;
   }
 
   &__body {
