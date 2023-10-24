@@ -85,6 +85,14 @@ body {
     @include font-weight(medium);
     max-inline-size: 66ch;
   }
+  &__select-element {
+    padding: 10px 16px;
+    @include typography("Poppins", clamp(0.5rem, 0.5rem + 1vw, 2rem));
+    border-radius: 8px;
+    border: 0;
+    outline: 1px solid #5884c6;
+    border-right: 16px solid transparent; // for spacing of arrow & outline
+  }
 
   &__interest {
     color: var(--title-color);
@@ -120,6 +128,12 @@ body {
 }
 
 .payment__button--label {
+  border-radius: 8px;
+  border: 1px solid #5884c6;
+  padding: 16px;
+}
+
+.payment__select {
   border-radius: 8px;
   border: 1px solid #5884c6;
   padding: 16px;
