@@ -21,6 +21,7 @@
     "gulp-cli": "^2.3.0"
   },
   "dependencies": {
+    "@material-ui/icons": "^4.11.3",
     "browser-sync": "^2.29.3",
     "gulp": "^4.0.2",
     "gulp-sass": "^5.1.0",

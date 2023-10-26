@@ -141,12 +141,87 @@ table {
   font-family: sans-serif;
   src: url("/fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf") format("woff2");
 }
+@font-face {
+  font-family: Inter;
+  src: url("/fonts/Inter/Inter-VariableFont_slnt,wght.ttf") format("woff2");
+}
 html {
   font-size: 16px;
 }
 
 body {
-  font-family: Poppins, sans-serif;
+  font-family: Inter, sans-serif;
+  margin: 54px;
+}
+
+button {
+  background-color: #131339;
+  color: #fff;
+  padding: 16px 24px;
+  border-radius: 24px;
+}
+
+.accordion {
+  border-radius: 32px;
+  padding: 54px;
+  background: aqua;
+  box-shadow: 20px 34px 74px 0px rgba(21, 21, 106, 0.07);
+}
+.accordion__header {
+  margin-block-end: 40px;
+}
+.accordion__header > *:not(:last-child) {
+  margin-bottom: 16px;
+}
+.accordion__header h3 {
+  color: var(--131339, #131339);
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.accordion__header p {
+  color: var(--131339, #131339);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.accordion__header button {
+  background-color: #131339;
+  color: #fff;
+}
+.accordion__body h3 {
+  color: var(--131339, #131339);
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.accordion__items {
+  margin: 16px 0;
+}
+.accordion__items > div:not(:last-child) {
+  margin-bottom: 5px;
+}
+.accordion__item {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+}
+.accordion__item span:first-child {
+  vertical-align: middle;
+}
+.accordion__item span:nth-child(2) {
+  color: var(--131339, #131339);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .payment {
