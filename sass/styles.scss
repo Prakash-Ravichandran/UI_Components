@@ -90,6 +90,7 @@ button {
   &__item {
     background: $accordion-tab-bg;
     border-radius: 8px;
+    border: 1px solid #d2d9ef;
     padding: 16px;
   }
   &__item span:first-child {
@@ -103,6 +104,63 @@ button {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+  }
+
+  &__radio .switch {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 34px;
+    background: $color-bg-violet;
+    border-radius: 32px;
+  }
+  &__radio input {
+    display: none;
+  }
+  &__radio input + .slider:before {
+    background: $color-bg-violet;
+  }
+  &__radio input:checked + .slider:before {
+    background: white;
+  }
+  &__radio input:checked + .slider {
+    background: $color-bg-violet; // change color of slider when checked
+  }
+  &__radio input:checked + .slider:before {
+    transform: translateX(26px); // moves the slider to left by 26px
+  }
+
+  &__radio .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $radio-btn-bg;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  &__radio .slider:before {
+    content: "";
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    cursor: pointer;
+    left: 4px;
+    bottom: 4px;
+    background: $radio-btn;
+    transition: 0.4s;
+  }
+  &__radio .slider {
+    border-radius: 34px;
+  }
+
+  &__radio .slider .round {
+    border-radius: 34px;
+  }
+  &__radio .round:before {
+    border-radius: 50%;
   }
 }
 

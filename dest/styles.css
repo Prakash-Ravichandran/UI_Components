@@ -210,6 +210,7 @@ button {
 .accordion__item {
   background: #fff;
   border-radius: 8px;
+  border: 1px solid #d2d9ef;
   padding: 16px;
 }
 .accordion__item span:first-child {
@@ -222,6 +223,60 @@ button {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+.accordion__radio .switch {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 34px;
+  background: #131339;
+  border-radius: 32px;
+}
+.accordion__radio input {
+  display: none;
+}
+.accordion__radio input + .slider:before {
+  background: #131339;
+}
+.accordion__radio input:checked + .slider:before {
+  background: white;
+}
+.accordion__radio input:checked + .slider {
+  background: #131339;
+}
+.accordion__radio input:checked + .slider:before {
+  transform: translateX(26px);
+}
+.accordion__radio .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #d2d9ef;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.accordion__radio .slider:before {
+  content: "";
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  cursor: pointer;
+  left: 4px;
+  bottom: 4px;
+  background: #f1f4fd;
+  transition: 0.4s;
+}
+.accordion__radio .slider {
+  border-radius: 34px;
+}
+.accordion__radio .slider .round {
+  border-radius: 34px;
+}
+.accordion__radio .round:before {
+  border-radius: 50%;
 }
 
 .payment {
