@@ -92,6 +92,9 @@ button {
     border-radius: 8px;
     border: 1px solid #d2d9ef;
     padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   &__item span:first-child {
     vertical-align: middle;
@@ -104,6 +107,11 @@ button {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+  }
+
+  &__radio {
+    display: inline-block;
+    vertical-align: middle;
   }
 
   &__radio .switch {

@@ -212,6 +212,9 @@ button {
   border-radius: 8px;
   border: 1px solid #d2d9ef;
   padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .accordion__item span:first-child {
   vertical-align: middle;
@@ -223,6 +226,10 @@ button {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+.accordion__radio {
+  display: inline-block;
+  vertical-align: middle;
 }
 .accordion__radio .switch {
   display: inline-block;
