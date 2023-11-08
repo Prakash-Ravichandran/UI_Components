@@ -87,6 +87,7 @@ button {
   &__items > div:not(:last-child) {
     margin-bottom: 5px;
   }
+
   &__item {
     background: $accordion-tab-bg;
     border-radius: 8px;
@@ -95,6 +96,16 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+  }
+  // &__item > div:first-child + div:nth-child(2) {
+  //   flex: 1 0 50%;
+  //   background-color: yellow;
+  // }
+  &__item > div:last-child {
+    flex: 1 0 100%;
+    background-color: #bdc3c7;
+    text-align: center;
   }
   &__item span:first-child {
     vertical-align: middle;
@@ -170,103 +181,25 @@ button {
   &__radio .round:before {
     border-radius: 50%;
   }
-}
-
-.payment {
-  border-radius: 32px;
-  background: #fff;
-  padding: 64px;
-
-  &__header > *,
-  &__body > *,
-  &__group > *,
-  div {
-    margin-bottom: 24px;
-  }
-
-  &__title {
-    color: var(--title-color);
-    @include typography("Merriweather", 25px);
-    @include font-weight(bold);
-  }
-
-  &__subtitle {
-    color: var(--title-color);
-    @include typography("Poppins", 18px);
-    @include font-weight(medium);
-  }
-
-  &__body {
-    border-radius: 12px;
-    background: #f5f9ff;
-    padding: 32px;
-  }
-  &__bd-title {
-    color: var(--title-color);
-    @include typography("Poppins", clamp(0.5rem, 0.5rem + 1vw, 2rem));
-    @include font-weight(medium);
-    max-inline-size: 66ch;
-  }
-  &__select-element {
-    padding: 10px 16px;
-    @include typography("Poppins", clamp(0.5rem, 0.5rem + 1vw, 2rem));
+  &__panel {
     border-radius: 8px;
-    border: 0;
-    outline: 1px solid #5884c6;
-    border-right: 16px solid transparent; // for spacing of arrow & outline
   }
-
-  &__interest {
-    color: var(--title-color);
-    @include typography("Poppins", 16px);
-    @include font-weight(medium);
-    display: flex;
-    gap: clamp(1.5rem, 2rem + 1vw, 3.5rem);
-    justify-content: space-between;
-  }
-
-  &__cost {
-    color: var(--title-color);
-    @include typography("Poppins", 16px);
-    @include font-weight(medium);
-    display: flex;
-    gap: clamp(1.5rem, 2rem + 1vw, 3.5rem);
-    justify-content: space-between;
-  }
-  &__total {
-    color: var(--title-color);
-    @include typography("Poppins", 16px);
-    @include font-weight(medium);
-    display: flex;
-    gap: clamp(1.5rem, 2rem + 1vw, 3.5rem);
-    justify-content: space-between;
-  }
-
-  &__splitup {
-    color: var(--title-color);
-    @include typography("Poppins", 16px);
-    @include font-weight(medium);
-    // flex-grow: 1;
-  }
-  &__button {
-    margin-top: 24px;
-
-    button {
-      background-color: #f5f9ff;
-      @include typography("Poppins", 16px);
-      @include font-weight(bold);
-    }
+  &__panel-group {
+    padding: 1.25rem;
+    box-sizing: border-box;
   }
 }
 
-.payment__button--label {
-  border-radius: 8px;
-  border: 1px solid #5884c6;
-  padding: 16px;
+.close {
+  height: 0px;
+  transform: scaleY(0);
+  transition: height 1s ease-out;
+  transition: transform 0.4s ease;
 }
 
-.payment__select {
-  border-radius: 8px;
-  border: 1px solid #5884c6;
-  padding: 16px;
+.open {
+  height: 100%;
+  width: 100%;
+  transform: scaleY(1);
+  transition: transform 0.4s ease;
 }
