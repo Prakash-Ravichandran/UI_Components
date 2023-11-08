@@ -7,3 +7,7 @@
 ## Problems faced: bottom-right gap for select element
 
 [bottom-right](https://jsfiddle.net/asaad7/r8sx9m7e/)
+
+## References:
+
+[Plain-js-accordion](https://codepen.io/sureshrkm/pen/ZbzBpr)
