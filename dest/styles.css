@@ -216,6 +216,7 @@ button {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  cursor: pointer;
 }
 .accordion__item > div:last-child {
   flex: 1 0 100%;
