@@ -15,3 +15,8 @@
 [material-icon-library-for-html](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:close:FILL@0;wght@400;GRAD@0;opsz@24&icon.query=remove)
 
 [Plain-js-accordion](https://codepen.io/sureshrkm/pen/ZbzBpr)
+
+## bug-to-fix
+
+![image](https://github.com/Prakash-Ravichandran/UI_Components/assets/74542543/dbb80558-e49b-4258-b879-737e6d41e2d9)
+
